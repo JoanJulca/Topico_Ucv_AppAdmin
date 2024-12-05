@@ -1,0 +1,21 @@
+<!-- Habilitar Desabilitar Usuarios -->
+<app-header [showMenu]="true"  title="Administrar Usuarios"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let user of users" class="user-item">
+      <ion-label>
+        <h2 class="user-name">{{ user.name }}</h2>
+        <p class="user-email">{{ user.email }}</p>
+        <h3 class="user-dni">{{ user.dni }}</h3>
+      </ion-label>
+      <ion-select [(ngModel)]="user.estadocuenta" (ionChange)="updateUserAccountStatus(user.uid, user.estadocuenta)" class="user-status-select">
+        <!-- Utiliza un ion-select para el estado de cuenta -->
+        <ion-select-option value="habilitado">Habilitado</ion-select-option>
+        <ion-select-option value="deshabilitado">Deshabilitado</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+  

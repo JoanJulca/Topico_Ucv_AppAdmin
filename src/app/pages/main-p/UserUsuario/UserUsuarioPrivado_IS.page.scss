@@ -1,0 +1,31 @@
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+
+  .user-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .user-email {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .user-status-select {
+    font-size: 14px;
+    width: 50%; 
+  }
+
+  .user-dni {
+    font-size: 12px;
+    color: #888;
+  }
+}

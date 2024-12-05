@@ -1,0 +1,35 @@
+ion-item.user-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+
+  ion-label {
+    flex: 1;
+    margin-right: 16px;
+
+    h2.user-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    p.user-email {
+      font-size: 14px;
+      color: #777;
+    }
+
+    h3.user-dni {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+
+ 
+  ion-select.user-status-select {
+    width: 150px;
+    font-size: 14px;
+    margin-left: auto; // Agrega esta línea para mover el combo box a la derecha
+
+}
+}

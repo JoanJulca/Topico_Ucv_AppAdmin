@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin: 0 auto; /* Centrar la imagen horizontalmente */
+}
+
+.welcome-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.university-text {
+  font-size: 18px;
+  color: #888;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.wide-button {
+  width: 200px; /* Ancho del botón */
+  border-radius: 20px; /* Hacer que el botón tenga esquinas redondeadas */
+}
+/* Global styles */
+.content-background {
+--background: #f0f0f5; /* Color de fondo de contenido */
+padding: 20px;
+}
+
+.d-flex-center {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+flex-direction: column;
+background: #fff;
+}
+
+.auth-form {
+width: 100%;
+max-width: 400px;
+padding: 20px;
+background: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.input-field {
+margin-bottom: 20px;
+}
+
+.validators {
+color: rgb(0, 0, 0);
+margin-bottom: 10px;
+}
+
+.forgot-password-link {
+display: block;
+text-align: right;
+margin-bottom: 20px;
+color: #000000;
+text-decoration: underline;
+}
+
+.submit-button {
+--background:  #000000;
+--color: white;
+margin-bottom: 10px;
+}
+
+.register-button {
+--background:  #000000;
+--color: white;
+}
+
+/* Logo animation */
+.animated-logo {
+width: 150px;
+height: auto;
+margin: 0 auto 20px auto;
+animation: bounceIn 2s;
+}
+
+@keyframes bounceIn {
+0%, 20%, 40%, 60%, 80%, 100% {
+  transform: translateY(0);
+}
+10%, 30%, 50%, 70%, 90% {
+  transform: translateY(-10px);
+}
+}
+
+.back-button {
+position: fixed;
+right: 20px;
+bottom: 20px;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #000000;
+}

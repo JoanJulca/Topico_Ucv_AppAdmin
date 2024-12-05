@@ -1,0 +1,53 @@
+<app-header title="Login SuperAdmin "></app-header>
+<ion-content class="content-background">
+  <div class="d-flex-center">
+    <!-- Este es el formulario -->
+    <form [formGroup]="form" class="auth-form" (ngSubmit)="submit()" (keypress.enter)="submit">
+      <p style="font-size: 35px; color: black;">Aqui se Coloca el Logo</p>
+
+      <!--=============== Email ===================-->
+      <app-custom-input 
+        autocomplete="email" 
+        [control]="form.controls.email"
+        type="email"
+        label="Correo"
+        class="input-field"
+      ></app-custom-input>
+
+      <div class="validators" *ngIf="form.controls.email.errors && form.controls.email.touched">
+        <div *ngIf="form.controls.email.errors?.['required']">El correo es requerido</div>
+        <div *ngIf="form.controls.email.errors?.['email']">Ingrese un correo válido</div>
+      </div>
+      <!--=============== Email ===================-->
+
+      <app-custom-input 
+        [control]="form.controls.password"
+        label="Contraseña"
+        class="input-field"
+      ></app-custom-input>
+
+      <div class="validators" *ngIf="form.controls.password.errors && form.controls.password.touched">
+        <div *ngIf="form.controls.password.errors?.['required']">La contraseña es requerida</div>
+      </div>
+
+      <p routerLink="forgot-password" class="forgot-password-link">¡Olvidaste tu contraseña?</p>
+
+      <!-- Botones -->
+      <ion-button expand="block" mode="ios" class="submit-button" type="submit" [disabled]="form.invalid">
+        Ingresar
+      </ion-button>
+
+
+      <div class="button-container">
+        <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+          <ion-button color="dark" routerLink="/welcome" class="rectangular-button doctor-button">
+            Regresar
+          </ion-button>
+        </ion-fab>
+      </div>
+      
+        
+    </form>
+  </div>
+</ion-content>
+
